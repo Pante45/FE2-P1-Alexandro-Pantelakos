@@ -395,6 +395,74 @@ header {
 }
 
 /* ========================================
+   SECCIÓN COMPARATIVA
+   ======================================== */
+
+.comparison {
+    background-color: var(--white);
+    padding: 100px 20px;
+}
+
+.comparison h2 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 60px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.table-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow-x: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 20px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 14px;
+}
+
+.comparison-table th {
+    background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ed 100%);
+    font-weight: 600;
+    color: var(--text-dark);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.comparison-table td {
+    color: var(--secondary-color);
+}
+
+.comparison-table td:first-child {
+    font-weight: 600;
+    color: var(--text-dark);
+    background: rgba(0, 113, 227, 0.05);
+}
+
+.comparison-table tr:nth-child(even) {
+    background: rgba(245, 245, 247, 0.5);
+}
+
+.comparison-table tr:hover {
+    background: rgba(0, 113, 227, 0.02);
+}
+
+/* ========================================
    SECCIÓN BENEFICIOS
    ======================================== */
 
@@ -705,6 +773,21 @@ footer p {
         padding: 30px 20px;
         font-size: 14px;
     }
+
+    .comparison {
+        padding: 70px 20px;
+    }
+
+    .comparison h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 15px 10px;
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -791,6 +874,18 @@ footer p {
         font-size: 16px;
     }
 
+    .comparison h2 {
+        font-size: 26px;
+        text-align: left;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+        padding: 12px 8px;
+        font-size: 12px;
+    }
+}
+
     .nav-links {
         gap: 10px;
     }
@@ -799,10 +894,10 @@ footer p {
         font-size: 14px;
         padding: 10px 15px;
     }
-}
+
 
 /* ========================================
-   ANIMACIONES ADICIONALES
+    ANIMACIONES ADICIONALES
    ======================================== */
 
 @keyframes slideIn {
