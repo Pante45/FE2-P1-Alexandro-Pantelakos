@@ -560,7 +560,42 @@ footer p {
    RESPONSIVE DESIGN
    ======================================== */
 
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero h1 {
+        font-size: 56px;
+    }
+
+    .hero .subtitle {
+        font-size: 20px;
+    }
+
+    .features h2,
+    .models h2,
+    .benefits h2,
+    .contact-section h2 {
+        font-size: 42px;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+    }
+
+    .models-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 25px;
+    }
+}
+
 @media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Aumentar tamaño base para mejor legibilidad */
+    }
+
     .navbar {
         flex-direction: column;
         gap: 15px;
@@ -571,29 +606,60 @@ footer p {
     .nav-links {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
+        gap: 15px; /* Más espacio para touch */
+    }
+
+    .nav-links a {
+        font-size: 16px; /* Más grande para móviles */
+        padding: 8px 12px;
+        min-height: 44px; /* Touch-friendly */
+        display: flex;
+        align-items: center;
+    }
+
+    .btn-cta {
+        padding: 10px 20px;
+    }
+
+    .hero {
+        padding: 100px 20px;
     }
 
     .hero h1 {
-        font-size: 42px;
+        font-size: 38px;
+        line-height: 1.2;
     }
 
     .hero .subtitle {
         font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .intro {
+        padding: 50px 20px;
+    }
+
+    .intro p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .features {
+        padding: 70px 20px;
     }
 
     .features h2,
     .models h2,
     .benefits h2,
     .contact-section h2 {
-        font-size: 36px;
+        font-size: 32px;
         margin-bottom: 40px;
     }
 
     .features-grid,
     .models-grid,
     .benefits-list {
-        gap: 20px;
+        gap: 25px;
     }
 
     .feature-card,
@@ -602,53 +668,136 @@ footer p {
         padding: 30px 20px;
     }
 
+    .model-image {
+        height: 180px; /* Ajustar altura para móviles */
+    }
+
+    .model-features li {
+        font-size: 14px; /* Mejor legibilidad */
+    }
+
+    .benefits {
+        padding: 70px 20px;
+    }
+
+    .contact-section {
+        padding: 80px 20px;
+    }
+
+    .contact-section h2 {
+        font-size: 32px;
+    }
+
     .contact-section p {
         font-size: 16px;
+        line-height: 1.6;
     }
 
     .cta-button {
-        padding: 14px 32px;
-        font-size: 15px;
+        padding: 16px 40px;
+        font-size: 16px;
+        min-height: 50px; /* Touch-friendly */
+        width: 100%;
+        max-width: 300px;
+    }
+
+    footer {
+        padding: 30px 20px;
+        font-size: 14px;
     }
 }
 
 @media (max-width: 480px) {
+    body {
+        font-size: 16px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
     .hero {
         padding: 80px 15px;
     }
 
     .hero h1 {
-        font-size: 32px;
+        font-size: 30px;
         margin-bottom: 15px;
+        letter-spacing: -0.5px;
     }
 
     .hero .subtitle {
         font-size: 16px;
     }
 
+    .intro p {
+        font-size: 15px;
+        text-align: left; /* Mejor legibilidad en móviles */
+    }
+
     .features h2,
     .models h2,
     .benefits h2,
     .contact-section h2 {
-        font-size: 28px;
-    }
-
-    .nav-links {
-        gap: 8px;
-    }
-
-    .nav-links a {
-        font-size: 13px;
+        font-size: 26px;
+        text-align: left; /* Mejor en móviles */
+        margin-bottom: 30px;
     }
 
     .features-grid,
     .models-grid,
     .benefits-list {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    .intro p {
-        font-size: 15px;
+    .feature-card,
+    .model-card,
+    .benefit-item {
+        padding: 25px 15px;
+        text-align: left; /* Mejor legibilidad */
+    }
+
+    .feature-card h3,
+    .benefit-item h3 {
+        text-align: center; /* Mantener centrado para cards */
+    }
+
+    .model-card h3 {
+        text-align: center;
+    }
+
+    .model-image {
+        height: 160px;
+        margin-bottom: 20px;
+    }
+
+    .model-features {
+        text-align: left;
+    }
+
+    .model-features li {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .contact-section p {
+        text-align: left;
+    }
+
+    .cta-button {
+        width: 100%;
+        padding: 18px;
+        font-size: 16px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        padding: 10px 15px;
     }
 }
 
