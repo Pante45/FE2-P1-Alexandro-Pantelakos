@@ -298,7 +298,7 @@ header {
 .model-card {
     background: var(--white);
     border-radius: 12px;
-    padding: 40px 20px;
+    padding: 40px 20px 50px 20px;
     text-align: center;
     border: 2px solid var(--border-color);
     transition: all 0.3s ease;
@@ -336,6 +336,27 @@ header {
     color: var(--text-dark);
 }
 
+.model-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.model-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.model-card:hover .model-image img {
+    transform: scale(1.05);
+}
+
 .badge {
     display: inline-block;
     background: linear-gradient(135deg, #0071e3, #00a4ff);
@@ -346,6 +367,31 @@ header {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+.model-features {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.model-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.model-features li {
+    font-size: 13px;
+    color: var(--secondary-color);
+    line-height: 1.6;
+    margin-bottom: 8px;
+    padding-left: 0;
+}
+
+.model-features li strong {
+    color: var(--text-dark);
+    font-weight: 600;
 }
 
 /* ========================================
